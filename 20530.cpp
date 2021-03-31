@@ -86,9 +86,8 @@ void dfs(int prev, int cur) {
 			from[nxt] = cur;
 			dfs(cur, nxt);
 		}
-		else if (nxt != prev && !done[nxt]) {
+		else if (nxt != prev && !done[nxt])
 			chkCycle(cur, nxt);
-		}
 	}
 	done[cur] = 1;
 }
